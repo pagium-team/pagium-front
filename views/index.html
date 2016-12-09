@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<title>Pagium</title>
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+		<!-- materialize css资源 start -->
+		<link href="lib/materialize/sweetalert.css" type="text/css" rel="stylesheet" media="screen,projection">
+		<link rel="stylesheet" type="text/css" href="lib/materialize/materialize.min.css">
+		<!-- <link rel="stylesheet" type="text/css" href="lib/materialize/style.min.css"> -->
+		<link rel="stylesheet" type="text/css" href="lib/materialize/plugins/perfect-scrollbar/perfect-scrollbar.css">
+		<!-- materialize css资源 end -->
+
+		<link rel="stylesheet" type="text/css" href="css/index.styl">
+
+		<link rel="stylesheet" href="./lib/codemirror/codemirror.css">
+	    <link rel="stylesheet" href="./lib/codemirror/lint.css">
+	    <link rel="stylesheet" href="./lib/codemirror/blackboard.css">
+
+	    <!--jsgrid css-->
+	    <link href="lib/jsgrid/css/jsgrid.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+	    <link href="lib/jsgrid/css/jsgrid-theme.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+
+		<style type="text/css">
+		html, body, #page-main {
+			height: 100%;
+		}
+		</style>
+	</head>
+	<body>
+		<!-- Start Page Loading -->
+	    <div id="loader-wrapper">
+	        <div id="loader"></div>        
+	        <div class="loader-section section-left"></div>
+	        <div class="loader-section section-right"></div>
+	    </div>
+	    <!-- End Page Loading -->
+		<div id="page-main" style="height: 100%; position: relative;"></div>
+	</body>
+	<footer>
+		<link rel="stylesheet" type="text/css" href="css/base.styl">
+		<link rel="stylesheet" type="text/css" href="css/animate.styl">
+		<link href="lib/font-awesome/font-awesome.css" rel="stylesheet">
+
+		<!-- jquery start -->
+		<script type="text/javascript" src="lib/jquery/jquery-1.12.0.js"></script>
+		<script type="text/javascript" src="lib/jquery/jqueryForm.js"></script>
+		<!-- jquery end -->
+
+		<script src="lib/vue.js"></script>
+		<script src="lib/scrat.js"></script>
+		<script type="text/javascript" src="lib/underscore/underscore-min.js"></script>
+
+		<!-- materialize js资源 start -->
+		<script type="text/javascript" src="lib/materialize/materialize.js"></script>
+		<script type="text/javascript" src="lib/materialize/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+		<script type="text/javascript" src="lib/materialize/sweetalert.min.js"></script>
+		<script type="text/javascript" src="lib/materialize/plugins.min.js"></script>
+		<!-- materialize js资源 end -->
+
+		<!-- codemirror js资源 start -->
+		<script src="./lib/codemirror/codemirror.js"></script>
+	    <script src="./lib/codemirror/jshint.js"></script>
+	    <script src="./lib/codemirror/javascript.js"></script>
+	    <script src="./lib/codemirror/lint.js"></script>
+	    <script src="./lib/codemirror/javascript-lint.js"></script>
+	    <!-- codemirror js资源 end -->
+
+	    <!-- js-grid start -->
+	    <script type="text/javascript" src="lib/jsgrid/js/db.js"></script> <!--data-->
+	    <script type="text/javascript" src="lib/jsgrid/js/jsgrid.min.js"></script>
+	    <script type="text/javascript" src="lib/jsgrid/js/jsgrid-script.js"></script>
+	    <!-- js-grid end -->
+
+	    <!-- loading js资源 start -->
+	    <script type="text/javascript" src="./lib/loading/prefixfree.js"></script>
+	    <!-- loading js资源 end -->
+
+		<script type="text/javascript" src="js/index.js"></script>
+		<script>
+			materialize();
+			require.config(__FRAMEWORK_CONFIG__);
+			require.async(['boot'], function (boot) {
+				boot();
+			});
+		</script>
+	</footer>
+</html>
